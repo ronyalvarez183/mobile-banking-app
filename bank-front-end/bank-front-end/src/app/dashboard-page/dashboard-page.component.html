@@ -1,0 +1,28 @@
+<img src="../../assets/images/bank_logo.png" class="login_bank_logo" >
+
+<br>
+<br>
+<br>
+
+<mat-card class="mat-card">
+  <mat-card-subtitle>
+    <b>Checking</b>
+  </mat-card-subtitle>
+  <mat-card-content *ngIf="balance">$      {{balance |  currency:'USD':'':'1.2-2'}}</mat-card-content>
+  <mat-card-footer>Available Balance</mat-card-footer>
+</mat-card>
+
+<br>
+<br>
+
+<button mat-raised-button (click)="openDepositDialog()" style="margin-right: 10%;"><b>Deposit</b></button>
+<button mat-raised-button (click)="openWithdrawDialog()"><b>Withdraw</b></button>
+
+<br>
+<br>
+
+<button class="suit_and_tie" style="margin-top: 30%" (click)="logout()">Logout</button>
+
+<br>
+
+<button class="suit_and_tie" (click)="deleteAccount()">Delete Account</button>

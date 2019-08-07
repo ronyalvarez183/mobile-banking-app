@@ -1,0 +1,15 @@
+<h2 mat-dialog-title>Withdraw</h2>
+<mat-dialog-content>How much are you withdrawing?</mat-dialog-content>
+
+<br>
+
+<mat-form-field>
+    <input matInput [(ngModel)]="amount" name="amount" placeholder="Enter the amount">
+</mat-form-field>
+
+<br>
+<br>
+
+<button mat-raised-button mat-dialog-close (click)="withdraw()" style="margin-right: 10%;">Withdraw</button>
+<button mat-raised-button mat-dialog-close color="warn">Cancel</button>
+
