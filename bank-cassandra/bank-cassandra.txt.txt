@@ -1,0 +1,7 @@
+CREATE KEYSPACE mobile_banking WITH replication = {'class': 'SimpleStrategy', 'replication_factor': 1};
+
+USE mobile_banking;
+
+CREATE TABLE customers ( id uuid PRIMARY KEY, first_name text, last_name text, balance double, email text, password text );
+
+INSERT INTO customers ( id, first_name, last_name, balance, email, password) VALUES (uuid(), 'Jonathan', 'Simmons', 10550.25, 'jsimmons@gmail.com', 'password' );
